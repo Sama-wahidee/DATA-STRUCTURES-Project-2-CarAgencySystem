@@ -1,0 +1,14 @@
+CustomerName, CustomerMobile, Brand, Model, Year, Color, Price, OrderDate, OrderStatus
+ Loor Azem, 056123456, TOYOTA, COROLLA, 2022, White, 160K, 22/5/2023, Finished
+ Abdullah Khamayseh, 056123456, TOYOTA, COROLLA, 2023, Black, 170K, 23/5/2023, Finished
+ Sara Rashed, 056123456, TOYOTA, LOGO, 2022, White, 180K, 24/5/2023, Finished
+ Adam Waheidi, 056123456, MAZDA, CX5, 2022, White, 160K, 24/5/2023, Finished
+ Raymaa Elayyan, 056123456, MAZDA, CX5, 2022, White, 160K, 24/5/2023, Finished
+ Shurouq Dar Taha, 056123456, MITSUBISHI, ASX, 2023, Black, 170K, 25/5/2023, Finished 
+ Ibaa Ewaida, 056123456, MITSUBISHI, ECLIPSE, 2022, Black, 170K, 27/5/2023, Finished 
+ Omar Kashour, 056123456, MERCEDES, C300 , 2023, White, 250K, 27/5/2023, InProcess
+ Haneen Abu Al Hawa, 056123456, BMW, X5, 2023, Blue, 215K, 27/5/2023, InProcess
+ Batoul Shini, 056123456, KIA, RIO, 2022, Blue, 145K, 28/5/2023, InProcess 
+ Mitri Khoury, 056123456, MERCEDES, C300 , 2023, White, 250K, 29/5/2023, InProcess
+ Rayyan Ghnaimat, 056123456, KIA, OPTIMA, 2010, Green, 160K, 30/5/2023, InProcess
+ Habeeb Awawda, 056123456, BMW, X5, 2023, Blue, 215K, 31/5/2023, InProcess

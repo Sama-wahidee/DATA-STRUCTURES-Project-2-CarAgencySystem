@@ -79,7 +79,7 @@ public class Main extends Application {
 		primaryStage.setTitle("Wholesome Motors");
 		StackPane st = new StackPane();
 		Scene scene = new Scene(st, 700, 700);
-		backGround(st, "C:\\Users\\sama6\\Downloads\\Car.jpg");
+		backGround(st, "/resources/Car.jpg");
 		VBox vb = new VBox(30);
 		Button uploadC = new Button("Upload available cars file");
 		uploadC.setFont(new Font("Arial", 20));
@@ -128,7 +128,7 @@ public class Main extends Application {
 										.parseInt(onelineL.get(4).substring(0, onelineL.get(4).length() - 1)) * 1000;
 								int year = (int) Integer.parseInt(onelineL.get(2));
 								Cars car = new Cars(onelineL.get(0), onelineL.get(1), year, onelineL.get(3), price);
-								car.setUrl("C:\\Users\\sama6\\Downloads\\" + (k + 1) + ".png");
+								car.setUrl("/resources/" + (k + 1) + ".png");
 								brand.getNode(onelineL.get(0)).linkedList.addFirst(car);
 								cars.add(0, car);
 								k++;
@@ -145,7 +145,7 @@ public class Main extends Application {
 								LinkedList l = new LinkedList();
 								Cars car = new Cars(onelineL.get(0), onelineL.get(1), year, onelineL.get(3), price);
 								l.addFirst(car);
-								car.setUrl("C:\\Users\\sama6\\Downloads\\" + (k + 1) + ".png");
+								car.setUrl("/resources/" + (k + 1) + ".png");
 								brand.addFirst(addBrand, l);
 								cars.add(0, car);
 								k++;
@@ -256,7 +256,7 @@ public class Main extends Application {
 		{
 			BorderPane tab1BP = new BorderPane();
 			tab1.setContent(tab1BP);
-			backGround(tab1BP, "C:\\Users\\sama6\\Downloads\\car1.png");
+			backGround(tab1BP, "/resources/car1.png");
 			Button insert1 = new Button("Insert new car brand.");
 			Button update1 = new Button("Update a pre-existing car brand.");
 			Button delete1 = new Button("Delete a pre-existing car brand.");
@@ -489,7 +489,7 @@ public class Main extends Application {
 		{
 			BorderPane tab2BP = new BorderPane();
 			tab2.setContent(tab2BP);
-			backGround(tab2BP, "C:\\Users\\sama6\\Downloads\\car2.png");
+			backGround(tab2BP, "/resources/car2.png");
 			Button insert2 = new Button("Insert a new car recored");
 			insert2.setFont(new Font("Arial", 30));
 			VBox buttonVB = new VBox();
@@ -855,7 +855,7 @@ public class Main extends Application {
 								infoBP.setBottom(VB);
 								infoBP.setCenter(dataVB);
 								Scene infoSc = new Scene(infoBP, 700, 700);
-								backGround(infoBP, "C:\\Users\\sama6\\Downloads\\black.png");
+								backGround(infoBP, "/resources/black.png");
 								infoS.setTitle("Information");
 								infoS.setScene(infoSc);
 								infoS.show();
@@ -900,7 +900,7 @@ public class Main extends Application {
 									orderS.setScene(orderSC);
 									orderS.show();
 									orderS.setTitle("New order");
-									backGround(orderBP, "C:\\Users\\sama6\\Downloads\\car3.png");
+									backGround(orderBP, "/resources/car3.png");
 									Label brandl = new Label("    Brand:    ");
 									brandl.setFont(new Font(40));
 									brandl.setStyle("-fx-text-fill: #ffffff");
@@ -1094,7 +1094,7 @@ public class Main extends Application {
 										new BackgroundFill(Color.GRAY, CornerRadii.EMPTY, Insets.EMPTY)));
 								p.getChildren().add(cbHB);
 								Scene updateSc = new Scene(updateBP, 700, 700);
-								backGround(updateBP, "C:\\Users\\sama6\\Downloads\\car1.png");
+								backGround(updateBP, "/resources/car1.png");
 								updateS.setScene(updateSc);
 								updateS.show();
 								updateVB.setSpacing(20);
@@ -1250,7 +1250,7 @@ public class Main extends Application {
 		// the forth tab that allows to add a new order for a non existing car
 		{
 			BorderPane tab4BP = new BorderPane();
-			backGround(tab4BP, "C:\\Users\\sama6\\Downloads\\car3.png");
+			backGround(tab4BP, "/resources/car3.png");
 			Label brandl = new Label("    Brand:    ");
 			brandl.setFont(new Font(40));
 			brandl.setStyle("-fx-text-fill: #ffffff");
@@ -1370,7 +1370,7 @@ public class Main extends Application {
 		//////////////////////////////////////////////////////////////////////////////////////////////////// orders
 		{
 			BorderPane tab5BP = new BorderPane();
-			backGround(tab5BP, "C:\\Users\\sama6\\Downloads\\car3.png");
+			backGround(tab5BP, "/resources/car3.png");
 			Button uploadOrder = new Button("Upload the order");
 			VBox vb1 = new VBox();
 			vb1.setSpacing(10);
@@ -1579,7 +1579,7 @@ public class Main extends Application {
 		// the six tab that saves the lists, queue, stack to a files
 		{
 			BorderPane tab6BP = new BorderPane();
-			backGround(tab6BP, "C:\\Users\\sama6\\Downloads\\car4.jpeg");
+			backGround(tab6BP, "/resources/car4.jpeg");
 			Button cars = new Button("Save the cars file");
 			cars.setFont(new Font("Arial", 30));
 			cars.setStyle(
@@ -1623,7 +1623,7 @@ public class Main extends Application {
 		{
 			BorderPane tab7BP = new BorderPane();
 			tab7.setContent(tab7BP);
-			backGround(tab7BP, "C:\\Users\\sama6\\Downloads\\car1.png");
+			backGround(tab7BP, "/resources/car1.png");
 			Button upload = new Button("Upload the last 10 sold cars");
 			upload.setFont(new Font("Arial", 30));
 			VBox vbR = new VBox();
@@ -1658,7 +1658,7 @@ public class Main extends Application {
 	// method to set a background
 	private void backGround(Pane p, String url) {
 		try {
-			BackgroundImage bGI = new BackgroundImage(new Image(url), BackgroundRepeat.NO_REPEAT,
+			BackgroundImage bGI = new BackgroundImage(new Image(getClass().getResourceAsStream(url)), BackgroundRepeat.NO_REPEAT,
 					BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT, BackgroundSize.DEFAULT);
 			Background bGround = new Background(bGI);
 			p.setBackground(bGround);

@@ -6,7 +6,7 @@ public class Cars {
 	private int year;
 	private String color;
 	private int price;
-	private String url = "C:\\Users\\sama6\\Downloads\\no (1).png";
+	private String url = "/resources/no (1).png";
 
 	public Cars() {
 
